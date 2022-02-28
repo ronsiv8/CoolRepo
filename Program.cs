@@ -62,6 +62,20 @@ namespace ConsoleApp34
                 if (Card[i] == userCard[i]) AmtCorrect++;
             }
             Console.WriteLine("Correct gusses:" + AmtCorrect);
+            // question 3
+            char[] a = new char[30];
+            char[] b = new char[30];
+            for (int i = 0; i < 30; i++)
+            {
+                int AmtSame = 0;
+                char CurrentVal = a[i];
+                for (int j = 0; j < 30; j++)
+                {
+                    if (CurrentVal == b[j]) AmtSame++;
+                }
+
+                Console.WriteLine(CurrentVal.ToString() + " shows up " + AmtSame + " times in other list");
+            }
         }
     }
 }
